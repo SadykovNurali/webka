@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Craft - Meal Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="main-header">
+    <div>
+        <h1>Food Craft</h1>
+    </div>
+
+    <nav>
+        <a href="index.html" id="home">Home</a>
+        <a href="sportfood.html" id="sportfood">Sport Food</a>
+        <a href="recipes.html" id="recipes">Recipes</a>
+            <a href="builder.html" id="builder"  >Meal Builder</a>
+        <a href="order.html" id="order">Order </a>
+        <a href="team.html" id="team">Our Team</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="info">
+        <h1>Interactive Meal Builder</h1>
+
+        <p>
+            Build your personalized meal bowl by choosing your favorite base, protein, and extra toppings.
+        </p>
+
+        <img src="images/foodcraft.jpg" alt="Food Craft Logo" style="width: 200px !important; height: auto !important; object-fit: contain !important; border-radius: 0 !important; border: none !important;">
+    </section>
+
+    <section class="reason">
+        <h2>Ingredient Calorie & Price Guide</h2>
+
+        <table class="food-table">
+            <thead>
+                <tr>
+                    <th>Ingredient Category</th>
+                    <th>Ingredient Name</th>
+                    <th>Calories (kcal)</th>
+                    <th>Price (KZT)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Base</td>
+                    <td>Brown Rice / Quinoa</td>
+                    <td>140</td>
+                    <td>600 ₸</td>
+                </tr>
+                <tr>
+                    <td>Protein</td>
+                    <td>Grilled Chicken Breast</td>
+                    <td>165</td>
+                    <td>900 ₸</td>
+                </tr>
+                <tr>
+                    <td>Vegetables</td>
+                    <td>Fresh Avocado & Greens</td>
+                    <td>120</td>
+                    <td>500 ₸</td>
+                </tr>
+                <tr>
+                    <td>Dressing</td>
+                    <td>Olive Oil & Herb Sauce</td>
+                    <td>90</td>
+                    <td>300 ₸</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+<!-- Секция популярных готовых блюд (Flexbox Card Row) -->
+<section class="reason">
+    <h2> Popular Fast & Tasty Bowls</h2>
+    <p>Choose one of our most popular quick combos or build your own bowl below:</p>
+
+    <div class="builder-cards-row">
+        
+        <!-- Карточка 1: Бургер-боул -->
+        <div class="order-card">
+            <img src="images/burg.jpg" alt="Double Cheeseburger Bowl" class="card-img">
+            <div class="card-details">
+                <h3> Double Cheese Burger Bowl</h3>
+                <p class="combo-desc">Juicy beef patties, melted cheddar cheese, pickles, and signature sauce.</p>
+                <span class="combo-price">2 200 ₸</span>
+                <button type="button" class="select-combo-btn">Quick Select</button>
+            </div>
+        </div>
+
+        <!-- Карточка 2: Пицца Пепперони -->
+        <div class="order-card">
+            <img src="images/pizz.jpg" alt="Pepperoni Pizza Bowl" class="card-img">
+            <div class="card-details">
+                <h3> Pepperoni Pizza Bowl</h3>
+                <p class="combo-desc">Classic spicy pepperoni slices, mozzarella cheese, and rich tomato sauce.</p>
+                <span class="combo-price">1 950 ₸</span>
+                <button type="button" class="select-combo-btn">Quick Select</button>
+            </div>
+        </div>
+
+        <!-- Карточка 3: Куриные стрипсы и фри -->
+        <div class="order-card">
+            <img src="images/chic.jpg" alt="Crispy Chicken & Fries" class="card-img">
+            <div class="card-details">
+                <h3> Crispy Chicken & Fries</h3>
+                <p class="combo-desc">Golden crispy chicken tenders, seasoned french fries, and dip sauce.</p>
+                <span class="combo-price">1 800 ₸</span>
+                <button type="button" class="select-combo-btn">Quick Select</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <section class="reason">
+        <h2>Assemble Your Custom Bowl</h2>
+        <p>Select your preferences below to build your meal:</p>
+
+        <form action="#" method="post" class="order-form">
+            <div class="form-group">
+                <label for="builder-name">Your Full Name:</label>
+                <input type="text" id="builder-name" name="builder-name" placeholder="Nurali Sadykov" required>
+            </div>
+
+            <div class="form-group">
+                <label for="builder-email">Your Email Address:</label>
+                <input type="email" id="builder-email" name="builder-email" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="meal-base">Select Your Base Ingredient:</label>
+                <select id="meal-base" name="meal-base">
+                    <option value="rice">Brown Rice Bowl</option>
+                    <option value="quinoa">Quinoa Mix</option>
+                    <option value="pasta">Whole Wheat Pasta</option>
+                    <option value="greens">Fresh Salad Greens</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="packaging-color">Choose Package Tag Color:</label>
+                <input type="color" id="packaging-color" name="packaging-color" value="#00008b">
+            </div>
+
+            <div class="form-group">
+                <label for="builder-notes">Special Dietary Requests / Allergies:</label>
+                <textarea id="builder-notes" name="builder-notes" rows="4" placeholder="Mention any extra dressing, no onions, or specific preferences..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Build & Save Custom Meal</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        <b>Our group is called: "Айғырлар"</b><br>
+        <b>In our group there are 3 persons:</b>
+    </p>
+
+    <ol>
+        <li>Asanali Kusmangaliev</li>
+        <li>Nurali Sadykov</li>
+        <li>Danial Zhambyl</li>
+    </ol>
+
+    <p><b>2026 Food Craft</b></p>
+</footer>
+
+</body>
+</html>

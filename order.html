@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Craft - Order </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="main-header">
+    <div>
+        <h1>Food Craft</h1>
+    </div>
+
+    <nav>
+        <a href="index.html" id="home">Home</a>
+        <a href="sportfood.html" id="sportfood">Sport Food</a>
+        <a href="recipes.html" id="recipes">Recipes</a>
+        <a href="builder.html" id="builder">Meal Builder</a>
+        <a href="order.html" id="order" >Order </a>
+        <a href="team.html" id="team">Our Team</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="info">
+        <h1>Order Delivery & Pickup</h1>
+
+        <p>
+            Get your freshly crafted meals delivered straight to your door or university campus.
+        </p>
+
+        <img src="images/foodcraft.jpg" alt="Food Craft Logo">
+    </section>
+
+    <section class="reason">
+        <h2>City Delivery Rates & Estimated Time</h2>
+
+        <table class="food-table">
+            <thead>
+                <tr>
+                    <th>Delivery Zone</th>
+                    <th>Average Time</th>
+                    <th>Minimum Order</th>
+                    <th>Delivery Fee</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Astana IT University Campus</td>
+                    <td>15 - 20 mins</td>
+                    <td>1500 ₸</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>EXPO & Mega Silk Way Area</td>
+                    <td>25 - 35 mins</td>
+                    <td>2500 ₸</td>
+                    <td>500 ₸</td>
+                </tr>
+                <tr>
+                    <td>Left Bank Center</td>
+                    <td>30 - 45 mins</td>
+                    <td>3000 ₸</td>
+                    <td>700 ₸</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+<!-- Секция выбора варианта доставки (Flexbox Cards) -->
+<section class="reason">
+    <h2> Choose Delivery Option</h2>
+    <p>Select how you would like to receive your order:</p>
+
+    <div class="delivery-cards-row">
+        
+        <!-- Вариант 1: Экспресс -->
+        <div class="delivery-card">
+            <div class="delivery-icon"></div>
+            <h3>AITU Express</h3>
+            <p class="delivery-desc">Direct delivery to AITU classrooms or dorms in 15–20 min.</p>
+            <span class="delivery-price">700 ₸</span>
+            <button type="button" class="select-delivery-btn">Select Express</button>
+        </div>
+
+        <!-- Вариант 2: Стандарт -->
+        <div class="delivery-card">
+            <div class="delivery-icon"></div>
+            <h3>Standard Delivery</h3>
+            <p class="delivery-desc">Regular city courier delivery to your home address (35–45 min).</p>
+            <span class="delivery-price">500 ₸</span>
+            <button type="button" class="select-delivery-btn">Select Standard</button>
+        </div>
+
+        <!-- Вариант 3: Самовывоз -->
+        <div class="delivery-card">
+            <div class="delivery-icon"></div>
+            <h3>Self-Pickup</h3>
+            <p class="delivery-desc">Pick up your order yourself from our nearest kitchen point.</p>
+            <span class="delivery-price">Free (0 ₸)</span>
+            <button type="button" class="select-delivery-btn">Select Pickup</button>
+        </div>
+
+    </div>
+</section>
+    <section class="reason">
+        <h2>Place Your Delivery Request</h2>
+        <p>Fill out the delivery order form below:</p>
+
+        <form action="#" method="post" class="order-form">
+            <div class="form-group">
+                <label for="order-customer">Customer Name:</label>
+                <input type="text" id="order-customer" name="order-customer" placeholder="Nurali Sadykov" required>
+            </div>
+
+            <div class="form-group">
+                <label for="order-address">Delivery Address (Street, House, Apartment):</label>
+                <input type="text" id="order-address" name="order-address" placeholder="Mangilik El C1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment-option">Payment Method:</label>
+                <select id="payment-option" name="payment-option">
+                    <option value="kaspi">Kaspi QR / Bank Transfer</option>
+                    <option value="card">Credit Card on Delivery</option>
+                    <option value="cash">Cash to Courier</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="order-comments">Courier Instructions:</label>
+                <textarea id="order-comments" name="order-comments" rows="3" placeholder="Intercom code, entrance number, call upon arrival..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Confirm & Send Order</button>
+        </form>
+        
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        <b>Our group is called: "Айғырлар"</b><br>
+        <b>In our group there are 3 persons:</b>
+    </p>
+
+    <ol>
+        <li>Asanali Kusmangaliev</li>
+        <li>Nurali Sadykov</li>
+        <li>Danial Zhambyl</li>
+    </ol>
+
+    <p><b>2026 Food Craft</b></p>
+</footer>
+
+</body>
+</html>

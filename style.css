@@ -1,0 +1,870 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: whitesmoke;
+    color: darkslategray;
+    line-height: 1.6;
+}
+
+body.page-grid {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+#main-header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    padding: 1.5rem;
+    border-right: 2px solid darkblue;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+h1, h2, h3 {
+    color: midnightblue;
+}
+
+
+#main-header {
+    background-color: darkblue;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+#main-header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+
+#home {
+    border-bottom: 2px solid crimson;
+}
+
+#sportfood {
+    color: lightyellow;
+}
+
+/* --- Стили для активных ссылок Meal Builder & Order (Нурали) --- */
+#builder, #order {
+    transition: all 0.3s ease;
+}
+
+#main-header nav a:hover {
+    color: crimson;
+}
+
+
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.reason {
+    background-color: snow;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 5px solid darkblue;
+    margin-bottom: 2rem;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 4px solid midnightblue;
+}
+
+
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer ol {
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#main-header h1 {
+    color:white;
+}
+
+/* --- Стили для таблиц (Meal Builder & Order) --- */
+.food-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.food-table th, .food-table td {
+    padding: 12px 15px;
+    border: 1px solid lightgray;
+    text-align: left;
+}
+
+.food-table th {
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+}
+
+.food-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.food-table tbody tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+/* --- Стили для форм Builder и Order (Flexbox & Modern UI) --- */
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 6px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: midnightblue;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group select, 
+.form-group textarea {
+    padding: 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-group input[type="text"]:focus, 
+.form-group input[type="email"]:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: darkblue;
+    box-shadow: 0 0 6px rgba(0, 0, 139, 0.25);
+}
+
+.form-group input[type="color"] {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* --- Кнопка отправки формы (Flexbox & Hover эффекты) --- */
+.submit-btn {
+    background-color: darkblue;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.submit-btn:hover {
+    background-color: crimson;
+    box-shadow: 0 4px 10px rgba(220, 20, 60, 0.3);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+#heathy-meal{
+    width: 500px;
+    height: 200px;
+    display: block;
+    border-radius: 10pt; 
+}
+
+.card-row {
+    display: flex;
+    gap: 20px;
+    margin: 2rem 0;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0 0 10px 0;
+}
+
+.card p {
+    flex-grow: 1;
+}
+
+.card button {
+    margin-top: auto;
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: crimson;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar a {
+    color: darkslategray;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: crimson;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 180px);
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    margin: 0;
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-list li a {
+    display: block;
+    padding: 8px 12px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.filter-list li a:hover {
+    background-color: lightgray;
+}
+
+@media (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .card-row {
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    body.page-grid {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    main {
+        max-width: none;
+        margin: 0;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 2px solid darkblue;
+    }
+
+    .submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ==========================================================
+   FLEXBOX КАРТОЧКИ ПОПУЛЯРНЫХ БЛЮД (NURALI)
+   ========================================================== */
+
+.builder-cards-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.order-card {
+    flex: 1;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Явный сброс круглых стилей для картинок в твоих карточках */
+.order-card img.card-img {
+    width: 100% !important;
+    height: 160px !important;
+    object-fit: cover !important;
+    border-radius: 0 !important; /* Убирает овалы/круги */
+    border-bottom: 2px solid #f0f0f0;
+    display: block !important;
+}
+
+.card-details {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.order-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: midnightblue;
+}
+
+.combo-desc {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.combo-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: darkblue;
+    margin-bottom: 12px;
+}
+
+.select-combo-btn {
+    background-color: snow;
+    color: darkblue;
+    border: 1.5px solid darkblue;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.select-combo-btn:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .builder-cards-row {
+        flex-direction: column;
+    }
+}/* ==========================================================
+   FLEXBOX КАРТОЧКИ ДОСТАВКИ ДЛЯ ORDER.HTML (NURALI)
+   ========================================================== */
+
+.delivery-cards-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+.delivery-card {
+    flex: 1;
+    min-width: 220px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.delivery-card:hover {
+    transform: translateY(-6px);
+    border-color: darkblue;
+    box-shadow: 0 10px 20px rgba(0,0,139,0.12);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: crimson;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.delivery-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.delivery-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: midnightblue;
+}
+
+.delivery-desc {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.delivery-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: darkblue;
+    margin-bottom: 15px;
+}
+
+.select-delivery-btn {
+    width: 100%;
+    background-color: snow;
+    color: darkblue;
+    border: 1.5px solid darkblue;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.select-delivery-btn:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .delivery-cards-row {
+        flex-direction: column;
+    }
+}
+/* ==========================================================
+   ASSIGNMENT 2 - RECIPES FLEXBOX
+   ========================================================== */
+
+.recipes-flex {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.recipe-card {
+    flex: 1;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Recipe card hover effect */
+.recipe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Recipe title */
+.recipe-card h3 {
+    margin-top: 0;
+    color: midnightblue;
+}
+
+
+/* Recipe image */
+.recipe-card .recipe-img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+    border: none;
+
+    margin: 10px 0 15px 0;
+}
+
+
+/* Keep recipe lists readable */
+.recipe-card ul,
+.recipe-card ol {
+    padding-left: 25px;
+}
+
+
+/* ==========================================================
+   ASSIGNMENT 2 - RECIPE GALLERY GRID
+   ========================================================== */
+
+.recipe-gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+/* Gallery item */
+.recipe-gallery .gallery-item {
+    position: relative;
+
+    height: 180px;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background-color: white;
+}
+
+
+/* Gallery image */
+.recipe-gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0;
+
+    border: none;
+    border-radius: 0;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* Zoom image when mouse is over it */
+.recipe-gallery .gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+/* Gallery caption */
+.recipe-gallery .caption {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 10px;
+
+    background-color: rgba(0, 0, 0, 0.70);
+
+    color: white;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* Show caption on hover */
+.recipe-gallery .gallery-item:hover .caption {
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   ASSIGNMENT 2 - TEAM FLEXBOX
+   ========================================================== */
+
+.team-flex {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: stretch;
+
+    margin-top: 20px;
+}
+
+
+/* Team member card */
+.team-card {
+    flex: 1;
+
+    background-color: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Team card hover effect */
+.team-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Team member heading */
+.team-card h3 {
+    margin-top: 0;
+
+    color: midnightblue;
+}
+
+
+/* Team member list */
+.team-card ul {
+    padding-left: 25px;
+
+    margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   ASSIGNMENT 2 - RESPONSIVE DESIGN
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* Recipe cards become one column */
+    .recipes-flex {
+        flex-direction: column;
+    }
+
+
+    /* Team cards become one column */
+    .team-flex {
+        flex-direction: column;
+    }
+
+
+    /* Gallery becomes two columns */
+    .recipe-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Smaller recipe images */
+    .recipe-card .recipe-img {
+        height: 200px;
+    }
+}
+
+
+/* Very small screens */
+@media (max-width: 480px) {
+
+    /* Gallery becomes one column */
+    .recipe-gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .recipe-gallery .gallery-item {
+        height: 200px;
+    }
+
+
+    .recipe-card,
+    .team-card {
+        padding: 15px;
+    }
+}
